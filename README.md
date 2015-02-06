@@ -155,24 +155,6 @@ section {
   background: #f1f1f1;
   border-radius: 3px 3px 0 0;
 }
-/* Шрифт-иконки от Font Awesome в формате Unicode */
-.tabs label:before {
-  font-family: fontawesome;
-  font-weight: normal;
-  margin-right: 10px;
-}
-.tabs label[for*="1"]:before {
-  content: "\f19a";
-}
-.tabs label[for*="2"]:before {
-  content: "\f17a";
-}
-.tabs label[for*="3"]:before {
-  content: "\f13b";
-}
-.tabs label[for*="4"]:before {
-  content: "\f13c";
-}
 /* изменения стиля заголовков вкладок при наведении */
 .tabs label:hover {
   color: #888;
