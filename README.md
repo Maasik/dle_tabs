@@ -102,8 +102,8 @@ function build_tabs($source, $html = ""){
 ```
 
 **2.2** Вставляем 
-```js
-<script type=text/javascript>
+```html
+<script type="text/javascript">
 function insert_tabs(){
 doInsert("[tab]\\n[tabs=Таб1]Таб1[/tabs]\\n[tabs=Таб2]Таб2[/tabs]\\n[tabs=Таб3]Таб3[/tabs]\\n[tabs=Таб4]Таб4[/tabs]\\n[/tab]", "", true );
 }
