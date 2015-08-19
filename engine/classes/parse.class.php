@@ -525,6 +525,7 @@ class ParseFilter {
 	
 	/*****CSS TABS FOR DLE BY MAD*****/
 	function build_tabs($source, $html = ""){
+
 		if ($html == TRUE) {
 
 			$count_tab = preg_match_all("#\[tab\](.+?)\[/tab\]#is", $source, $tab);
@@ -544,9 +545,12 @@ class ParseFilter {
 					$tabs1[$x] .= $title;
 					$num_tab++;
 				}
+
 				$source = str_replace($tab[0][$x], "<!--TabsBegin--><div class=\"tabs\">".$tabs1[$x].$tabs2[$x]."</div><!--/TabsEnd-->", $source);
 			}
+
 		} else {
+			
 			$count_tb = preg_match_all("#<!--TabsBegin--><div class=\"tabs\">(.*)<\/div><!--\/TabsEnd-->#si", $source, $tb);
 
 			for ($x=0; $x< $count_tb; $x++){
@@ -558,9 +562,11 @@ class ParseFilter {
 
 					$tabs2[$x] .="[tabs=".$title[2][$i]."]".$text[2][$i]."[/tabs]\n";
 				}
+
 				$source = str_replace($tb[0][$x],"[tab]\n".$tabs2[$x]."[/tab]",$source);
 			}
 		}
+
 		return $source;
 	}
 	/*****CSS TABS FOR DLE BY MAD*****/
